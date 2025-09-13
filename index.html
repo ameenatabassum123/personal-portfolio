@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameena Tabassum | CS Engineer</title>
+    <meta name="description" content="Portfolio of Ameena Tabassum, Artificial Intelligence & Data Science student specializing in Data Analysis and Software Development">
+    <meta property="og:title" content="Ameena Tabassum | CS Engineer">
+    <meta property="og:description" content="Professional portfolio showcasing projects, skills and achievements">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ameenatabassum.com">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    
+    <style>
+        :root {
+            --primary: #FFB6C1;
+            --primary-light: #FFE4E1;
+            --primary-dark: #DB7093;
+            --dark: #333333;
+            --gray: #F5F5F5;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: var(--gray);
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary);
+            transition: width 1s ease-in-out;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 4px solid var(--white);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+        
+        /* Enhanced professional animations */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .shadow-3xl {
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-pink-500">Ameena<span class="text-gray-800">Tabassum</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-pink-500 transition">About</a>
+                <a href="#education" class="text-gray-700 hover:text-pink-500 transition">Education</a>
+                <a href="#skills" class="text-gray-700 hover:text-pink-500 transition">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-pink-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute shadow-lg">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#about" class="text-gray-700 hover:text-pink-500 transition">About</a>
+                <a href="#education" class="text-gray-700 hover:text-pink-500 transition">Education</a>
+                <a href="#skills" class="text-gray-700 hover:text-pink-500 transition">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-pink-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+        <!-- Improved gradient background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-purple-50"></div>
+        
+        <!-- Animated background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-200 rounded-full opacity-20 animate-pulse"></div>
+            <div class="absolute top-3/4 right-1/4 w-24 h-24 bg-purple-200 rounded-full opacity-30 animate-bounce" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-20 h-20 bg-pink-100 rounded-full opacity-25 animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div class="order-2 lg:order-1" data-aos="fade-right">
+                    <!-- Professional badge -->
+                    <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-80 backdrop-blur-sm rounded-full shadow-sm mb-6">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                        <span class="text-sm font-medium text-gray-700">Available for opportunities</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+                        Hi, I'm <span class="text-pink-500">Ameena</span>
+                    </h1>
+                    
+                    <h2 class="text-xl md:text-2xl text-gray-600 mb-6 font-medium">
+                        Computer Science Student & 
+                        <span class="text-pink-500 font-semibold">Aspiring Software Developer</span>
+                    </h2>
+                    
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed max-w-lg">
+                        Passionate about creating innovative solutions through code. Specializing in full-stack development, data science, and machine learning.
+                    </p>
+                    
+                    <!-- Enhanced CTA buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#projects" class="group bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                            <i data-feather="eye" class="mr-2 w-5 h-5"></i>
+                            View My Work
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        
+                        <a href="#" class="group bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 hover:border-pink-300 px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+                            <i data-feather="download" class="mr-2 w-5 h-5"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                    
+                    <!-- Social links -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-500 text-sm font-medium">Connect with me:</span>
+                        <div class="flex space-x-3">
+                            <a href="#" class="bg-white bg-opacity-80 backdrop-blur-sm hover:bg-pink-500 hover:text-white p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 group">
+                                <i data-feather="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-80 backdrop-blur-sm hover:bg-pink-500 hover:text-white p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 group">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-80 backdrop-blur-sm hover:bg-pink-500 hover:text-white p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 group">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Professional Image -->
+                <div class="order-1 lg:order-2 flex justify-center" data-aos="fade-left">
+                    <div class="relative group">
+                        <!-- Main image container -->
+                        <div class="relative w-80 h-80 lg:w-96 lg:h-96">
+                            <!-- Background decorative elements -->
+                            <div class="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl opacity-20 transform rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+                            <div class="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl opacity-15 transform -rotate-6 group-hover:-rotate-12 transition-transform duration-500"></div>
+                            
+                            <!-- Main image -->
+                            <div class="relative w-full h-full bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white group-hover:shadow-3xl transition-all duration-500">
+                                <img src="http://static.photos/people/640x360/1" alt="Ameena Tabassum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                
+                                <!-- Overlay gradient -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-pink-500 via-transparent to-transparent opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            </div>
+                            
+                            <!-- Floating badge -->
+                            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 group-hover:scale-110 transition-transform duration-300">
+                                <div class="flex items-center space-x-3">
+                                    <div class="bg-pink-100 p-2 rounded-xl">
+                                        <i data-feather="code" class="w-6 h-6 text-pink-500"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-800 text-sm">Coding</div>
+                                        <div class="text-pink-500 text-xs font-medium">Enthusiast</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tech stack indicators -->
+                            <div class="absolute -left-8 top-1/3 bg-white rounded-xl shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <div class="flex flex-col space-y-2">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <span class="text-blue-600 font-bold text-xs">Py</span>
+                                    </div>
+                                    <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <span class="text-green-600 font-bold text-xs">JS</span>
+                                    </div>
+                                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <span class="text-purple-600 font-bold text-xs">AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="1000">
+                <a href="#about" class="flex flex-col items-center text-gray-500 hover:text-pink-500 transition-colors">
+                    <span class="text-sm font-medium mb-2">Scroll to explore</span>
+                    <i data-feather="chevron-down" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            
+            <!-- Main Content Card -->
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg" data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left: Core Info -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Background</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Computer Science student passionate about building innovative software solutions. Currently pursuing my degree with hands-on experience in full-stack development and modern technologies.
+                            </p>
+                            
+                            <!-- Key Areas -->
+                            <div class="mb-8">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-4">Focus Areas</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">Full-Stack Development</span>
+                                    <span class="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">Data Science</span>
+                                    <span class="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">Machine Learning</span>
+                                    <span class="inline-block bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">Cloud Computing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Stats & Highlights -->
+                        <div>
+                            <!-- Quick Stats -->
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-500 mb-2">3.8</div>
+                                    <div class="text-gray-600 text-sm">GPA</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-500 mb-2">15+</div>
+                                    <div class="text-gray-600 text-sm">Projects</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-500 mb-2">8+</div>
+                                    <div class="text-gray-600 text-sm">Technologies</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-pink-500 mb-2">100%</div>
+                                    <div class="text-gray-600 text-sm">Passion</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Education Highlight -->
+                            <div class="bg-white p-6 rounded-xl shadow-sm">
+                                <h4 class="text-lg font-semibold text-gray-800 mb-4">Current Education</h4>
+                                <div class="flex items-start">
+                                    <div class="bg-pink-100 p-2 rounded-full mr-4 mt-1">
+                                        <i data-feather="graduation-cap" class="text-pink-500 w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800">Bachelor of Technology</h5>
+                                        <p class="text-gray-600 text-sm">Computer Science & Engineering</p>
+                                        <p class="text-gray-500 text-sm">XYZ University • 2020-2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Strengths - Compact Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-pink-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="code" class="text-pink-500 w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Technical Expertise</h4>
+                        <p class="text-gray-600 text-sm">Modern frameworks and clean architecture</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-pink-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="lightbulb" class="text-pink-500 w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Problem Solver</h4>
+                        <p class="text-gray-600 text-sm">Creative solutions and best practices</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-pink-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="users" class="text-pink-500 w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Team Player</h4>
+                        <p class="text-gray-600 text-sm">Strong collaboration in agile environments</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="bg-pink-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="target" class="text-pink-500 w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Results Driven</h4>
+                        <p class="text-gray-600 text-sm">Focused on impactful software solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Education Journey</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-200 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative md:w-1/2 ml-auto md:pl-16 pr-6 md:pr-0" data-aos="fade-left">
+                        <div class="bg-white p-6 rounded-xl shadow-sm timeline-item">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-pink-500 text-white p-2 rounded-full mr-4">
+                                    <i data-feather="graduation-cap"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Bachelor of Technology</h3>
+                            </div>
+                            <p class="text-gray-600 mb-2">XYZ University | 2020 - Present</p>
+                            <p class="text-gray-500">Major in Computer Science with specialization in Data Science. Current GPA: 3.8/4.0</p>
+                            <div class="mt-4">
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-2">Data Structures</span>
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-2">Machine Learning</span>
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Database Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="relative md:w-1/2 mr-auto md:pr-16 pl-6 md:pl-0" data-aos="fade-right">
+                        <div class="bg-white p-6 rounded-xl shadow-sm timeline-item">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-pink-500 text-white p-2 rounded-full mr-4">
+                                    <i data-feather="book"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Higher Secondary</h3>
+                            </div>
+                            <p class="text-gray-600 mb-2">ABC Junior College | 2018 - 2020</p>
+                            <p class="text-gray-500">Completed with 95% aggregate in Mathematics, Physics, and Computer Science.</p>
+                            <div class="mt-4">
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-2">Mathematics</span>
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-2">Physics</span>
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Computer Science</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="relative md:w-1/2 ml-auto md:pl-16 pr-6 md:pr-0" data-aos="fade-left">
+                        <div class="bg-white p-6 rounded-xl shadow-sm timeline-item">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-pink-500 text-white p-2 rounded-full mr-4">
+                                    <i data-feather="award"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800">Secondary Education</h3>
+                            </div>
+                            <p class="text-gray-600 mb-2">DEF High School | 2018</p>
+                            <p class="text-gray-500">Graduated with 98% aggregate and state topper in Computer Science.</p>
+                            <div class="mt-4">
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mr-2">School Topper</span>
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">State Rank 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="code" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Python</span>
+                                <span class="text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Java</span>
+                                <span class="text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">C++</span>
+                                <span class="text-gray-500">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Tools -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="database" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Data Tools</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">SQL</span>
+                                <span class="text-gray-500">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Power BI</span>
+                                <span class="text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Tableau</span>
+                                <span class="text-gray-500">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Technologies -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="globe" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Web Technologies</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">HTML/CSS</span>
+                                <span class="text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">JavaScript</span>
+                                <span class="text-gray-500">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">React</span>
+                                <span class="text-gray-500">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Machine Learning -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="cpu" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Machine Learning</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">TensorFlow</span>
+                                <span class="text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Scikit-learn</span>
+                                <span class="text-gray-500">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Pandas/Numpy</span>
+                                <span class="text-gray-500">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="users" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Problem Solving</span>
+                        <span class="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Teamwork</span>
+                        <span class="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Communication</span>
+                        <span class="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Leadership</span>
+                        <span class="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Time Management</span>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="message-square" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Languages</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">English</span>
+                                <span class="text-gray-500">Fluent</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Hindi</span>
+                                <span class="text-gray-500">Native</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Urdu</span>
+                                <span class="text-gray-500">Proficient</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Certifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Data Science Professional</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">IBM | 2022</p>
+                    <p class="text-gray-500 mb-4">Completed comprehensive training in data analysis, visualization, and machine learning using Python and R.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Machine Learning A-Z</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Udemy | 2021</p>
+                    <p class="text-gray-500 mb-4">Hands-on experience with supervised and unsupervised learning algorithms, neural networks, and deep learning.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Tableau Desktop Specialist</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Tableau | 2022</p>
+                    <p class="text-gray-500 mb-4">Certified in creating interactive dashboards, data visualization best practices, and advanced analytics.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Python for Data Science</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Coursera | 2021</p>
+                    <p class="text-gray-500 mb-4">Mastered data manipulation, analysis, and visualization using Python libraries like Pandas, NumPy, and Matplotlib.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">SQL for Data Science</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">DataCamp | 2022</p>
+                    <p class="text-gray-500 mb-4">Learned advanced SQL queries, database design, and optimization techniques for data analysis.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Power BI Data Analyst</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Microsoft | 2023</p>
+                    <p class="text-gray-500 mb-4">Certified in transforming data into immersive visuals and business insights using Power BI.</p>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 font-medium flex items-center">
+                        View Certificate <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Extracurricular Section -->
+    <section id="extracurricular" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Beyond Academics</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Activity 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up">
+                    <div class="bg-pink-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-pink-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Leadership</h3>
+                    <p class="text-gray-600">Organized 10+ tech events and hackathons at university level with 200+ participants.</p>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-pink-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="book" class="text-pink-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Workshops</h3>
+                    <p class="text-gray-600">Conducted workshops on Python programming and data visualization for juniors.</p>
+                </div>
+                
+                <!-- Activity 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-pink-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="feather" class="text-pink-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Painting</h3>
+                    <p class="text-gray-600">Expressive acrylic painting enthusiast with 20+ artworks showcased in local exhibitions.</p>
+                </div>
+                
+                <!-- Activity 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-pink-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="pen-tool" class="text-pink-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Writing</h3>
+                    <p class="text-gray-600">Published articles on Medium about emerging tech trends and career guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <form class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md hover:shadow-lg">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                    <i data-feather="mail"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <a href="mailto:ameenatabassum1664@gmail.com" class="hover:underline">ameenatabassum1664@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                    <i data-feather="phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <a href="tel:+919492781292" class="hover:underline">+91 9492781292</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Location</h4>
+                                    <p>Hyderabad, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-bold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+                                    <i data-feather="linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+                                    <i data-feather="github"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-pink-400">Ameena<span class="text-white">Tabassum</span></a>
+                    <p class="text-gray-400 mt-2">Computer Science & Engineering Student</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#education" class="text-gray-400 hover:text-white transition">Education</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-gray-800 hover:bg-pink-500 p-3 rounded-full transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="bg-gray-800 hover:bg-pink-500 p-3 rounded-full transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="bg-gray-800 hover:bg-pink-500 p-3 rounded-full transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ameena Tabassum. All rights reserved.</p>
+                <a href="#" class="text-pink-400 hover:text-pink-300 flex items-center">
+                    <i data-feather="arrow-up" class="mr-2"></i> Back to Top
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffb6c1,
+            backgroundColor: 0xfff0f5,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Animate skill bars on scroll
+        const skillBars = document.querySelectorAll('.skill-progress');
+        
+        const animateSkillBars = () => {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('#skills').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
