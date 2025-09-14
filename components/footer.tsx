@@ -6,17 +6,17 @@ import { Button } from "@/components/ui/button"
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/ameena-tabassum",
+    href: "https://github.com/ameenatabassum123",
     icon: Github,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/ameena-tabassum",
+    href: "https://www.linkedin.com/in/md-ameena-tabassum-7b050b305/",
     icon: Linkedin,
   },
   {
     name: "Email",
-    href: "mailto:ameena.tabassum@example.com",
+    href: "mailto:ameenatabassum123@gmail.com",
     icon: Mail,
   },
 ]

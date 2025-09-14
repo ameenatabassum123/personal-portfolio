@@ -7,28 +7,28 @@ import { IntersectionObserver } from "./intersection-observer"
 import Image from "next/image"
 
 const skills = [
-  { name: "React", id: "react" },
-  { name: "TypeScript", id: "ts" },
-  { name: "JavaScript", id: "js" },
-  { name: "Python", id: "py" },
-  { name: "Node.js", id: "nodejs" },
-  { name: "HTML5", id: "html" },
-  { name: "CSS3", id: "css" },
-  { name: "MongoDB", id: "mongodb" },
-  { name: "MySQL", id: "mysql" },
-  { name: "Git", id: "git" },
-  { name: "GitHub", id: "github" },
-  { name: "AWS", id: "aws" },
-  { name: "Docker", id: "docker" },
-  { name: "Figma", id: "figma" },
-  { name: "VS Code", id: "vscode" },
-  { name: "Next.js", id: "nextjs" },
-  { name: "Tailwind", id: "tailwind" },
-  { name: "Express", id: "express" },
+  { name: "Python", id: "py", isCustom: false },
+  { name: "R", id: "r", isCustom: false },
+  { name: "TensorFlow", id: "tensorflow", isCustom: false },
+  { name: "PyTorch", id: "pytorch", isCustom: false },
+  { name: "Scikit-learn", id: "sklearn", isCustom: false },
+  { name: "Anaconda", id: "anaconda", isCustom: false },
+  { name: "Power BI", id: "powerbi-icon.svg", isCustom: true },
+  { name: "Excel", id: "excel-icon.svg", isCustom: true },
+  { name: "Streamlit", id: "streamlit-icon.svg", isCustom: true },
+  { name: "MySQL", id: "mysql", isCustom: false },
+  { name: "PostgreSQL", id: "postgres", isCustom: false },
+  { name: "MongoDB", id: "mongodb", isCustom: false },
+  { name: "React", id: "react", isCustom: false },
+  { name: "JavaScript", id: "js", isCustom: false },
+  { name: "HTML5", id: "html", isCustom: false },
+  { name: "CSS3", id: "css", isCustom: false },
+  { name: "Git", id: "git", isCustom: false },
+  { name: "GitHub", id: "github", isCustom: false },
 ]
 
 const achievements = [
-  { label: "GPA", value: "3.8/4.0", icon: GraduationCap },
+  { label: "GPA", value: "7.8/10", icon: GraduationCap },
   { label: "Projects", value: "15+", icon: Code2 },
   { label: "Certifications", value: "8+", icon: Award },
   { label: "Experience", value: "2+ Years", icon: Briefcase },
@@ -76,7 +76,7 @@ export function AboutSection() {
                     <h3 className="text-xl font-bold text-foreground mb-2">Ameena Tabassum</h3>
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full border border-primary/20 mb-4">
                       <User className="w-3 h-3 text-primary" />
-                      <span className="text-primary font-medium text-sm">CS Engineering Student</span>
+                      <span className="text-primary font-medium text-sm">AI&DS Engineering Student</span>
                     </div>
                   </div>
 
@@ -90,10 +90,6 @@ export function AboutSection() {
                       <Calendar className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-foreground font-medium text-sm">Available for opportunities</span>
                     </div>
-                    {/* <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50 border border-border/30">
-                      <Coffee className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                      <span className="text-foreground font-medium text-sm">Always learning & coding</span>
-                    </div> */}
                   </div>
 
                   {/* Bio */}
@@ -209,14 +205,24 @@ export function AboutSection() {
                   >
                     {/* Skill Icon */}
                     <div className="relative mb-2 group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-10 h-10 rounded-xl overflow-hidden bg-white p-1.5 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                        <Image
-                          src={`https://skillicons.dev/icons?i=${skill.id}`}
-                          alt={skill.name}
-                          width={40}
-                          height={40}
-                          className="w-full h-full object-contain"
-                        />
+                      <div className="w-16 h-16 rounded-xl overflow-hidden p-0 group-hover:shadow-xl transition-shadow duration-300">
+                        {skill.isCustom ? (
+                          <Image
+                            src={`/${skill.id}`}
+                            alt={skill.name}
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <Image
+                            src={`https://skillicons.dev/icons?i=${skill.id}`}
+                            alt={skill.name}
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                          />
+                        )}
                       </div>
                       {/* Glow effect on hover */}
                       <div className="absolute inset-0 rounded-xl bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
@@ -231,14 +237,6 @@ export function AboutSection() {
                     <div className="w-0 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full group-hover:w-8 transition-all duration-300 mt-1"></div>
                   </div>
                 ))}
-              </div>
-              
-              {/* Skills Footer */}
-              <div className="text-center mt-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-                  <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-                  <span className="text-sm font-medium text-primary">Always exploring new technologies</span>
-                </div>
               </div>
             </CardContent>
           </Card>

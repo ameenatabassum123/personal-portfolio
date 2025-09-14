@@ -50,12 +50,12 @@ export function HeroSection() {
               Available for opportunities
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 gradient-text animate-shimmer leading-tight">
-              Ameena Tabassum
+            <h1 className="text-5xl md:text-6xl lg:text-5xl font-bold text-foreground mb-4 gradient-text animate-shimmer leading-tight">
+              Mohammad Ameena Tabassum
             </h1>
             
             <h2 className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-4 animate-fadeInLeft font-medium leading-relaxed max-w-4xl" style={{ animationDelay: '0.2s' }}>
-              Computer Science & Engineering Student | Aspiring Data Analyst & Software Developer
+              Artificial Intelligence & Data Science Student | Aspiring Data Analyst & Software Developer
             </h2>
             
             <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed animate-fadeInLeft max-w-2xl" style={{ animationDelay: '0.4s' }}>
@@ -63,16 +63,27 @@ export function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover-lift hover-gradient">
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover-lift hover-gradient"
+                onClick={() => window.open('https://drive.google.com/file/d/1LTGB9XsYWYW6_xEHbHZ5O4Nvsvqq6ZOP/view?usp=sharing', '_blank')}
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
               <div className="flex gap-3">
-                <Button variant="outline" className="bg-background hover:bg-muted border-primary/30 hover:border-primary text-foreground px-5 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg card-hover flex items-center">
+                <Button 
+                  variant="outline" 
+                  className="bg-background hover:bg-muted border-primary/30 hover:border-primary text-foreground px-5 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg card-hover flex items-center"
+                  onClick={() => window.open('https://www.linkedin.com/in/md-ameena-tabassum-7b050b305/', '_blank')}
+                >
                   <Linkedin className="mr-2 h-4 w-4" />
                   LinkedIn
                 </Button>
-                <Button variant="outline" className="bg-background hover:bg-muted border-primary/30 hover:border-primary text-foreground px-5 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg card-hover flex items-center">
+                <Button 
+                  variant="outline" 
+                  className="bg-background hover:bg-muted border-primary/30 hover:border-primary text-foreground px-5 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg card-hover flex items-center"
+                  onClick={() => window.open('https://github.com/ameenatabassum123', '_blank')}
+                >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Button>
