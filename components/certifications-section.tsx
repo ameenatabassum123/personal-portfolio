@@ -222,9 +222,6 @@ export function CertificationsSection() {
             <CheckCircle className="mr-3 h-6 w-6 text-primary animate-pulseGlow" />
             Academic Achievements
           </h3>
-          <p className="text-center text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Click on any achievement card to mark it as favorite!
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {achievements.map((achievement, index) => {
@@ -331,13 +328,6 @@ export function CertificationsSection() {
           </div>
           
           {/* Achievement Counter */}
-          <div className="text-center mt-6">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-amber-50/50 to-yellow-50/50 border border-amber-200/30">
-              <span className="text-sm font-medium text-amber-700">
-                {starredAchievements.length} of {achievements.length} achievements starred
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

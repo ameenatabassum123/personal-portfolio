@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "ameena.tabassum@example.com",
-    href: "mailto:ameena.tabassum@example.com",
+    value: "ameenatabassum1664@gmail.com",
+    href: "mailto:ameenatabassum1664@gmail.com",
     description: "Feel free to reach out for opportunities or collaborations",
   },
   {
@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "New York, NY",
+    value: "Prakash Nagar, Khammam, Telangana",
     href: "#",
     description: "Open to remote work and relocation opportunities",
   },
@@ -45,7 +45,7 @@ const contactInfo = [
     label: "Availability",
     value: "Available for internships",
     href: "#",
-    description: "Seeking summer 2024 internship opportunities",
+    description: "Seeking 2025 internship opportunities",
   },
 ]
 

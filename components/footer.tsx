@@ -16,7 +16,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:ameenatabassum123@gmail.com",
+    href: "mailto:ameenatabassum1664@gmail.com",
     icon: Mail,
   },
 ]
@@ -30,7 +30,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-heading font-bold text-xl text-primary">Ameena Tabassum</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Computer Science student passionate about creating innovative solutions through technology. Always
+              Artificial Intelligence and Data Science student passionate about creating innovative solutions through technology. Always
               learning, always growing.
             </p>
           </div>
@@ -80,7 +80,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-            <p className="text-muted-foreground text-sm">© 2024 Ameena Tabassum. All rights reserved.</p>
+            <p className="text-muted-foreground text-sm">© 2025 Ameena Tabassum. All rights reserved.</p>
             <p className="text-muted-foreground text-sm flex items-center">
               Made with <Heart className="h-4 w-4 mx-1 text-primary" /> using Next.js & Tailwind CSS
             </p>

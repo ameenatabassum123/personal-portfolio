@@ -9,29 +9,98 @@ import { ExternalLink, Github, Filter } from "lucide-react"
 const projects = [
   {
     id: 1,
-    title: "EcoTrack - Sustainability Dashboard",
-    category: "Full-Stack",
+    title: "Smart Grade App - AI-Powered Student Performance Predictor",
+    category: "AI/ML",
     description:
-      "A web application that helps users track their carbon footprint with real-time data visualization and community challenges.",
+      "A machine learning application that predicts student grades using K-Nearest Neighbors algorithm with interactive data visualizations.",
     longDescription:
-      "EcoTrack is a full-stack sustainability platform built with Next.js and TypeScript. It integrates with multiple APIs to track energy consumption, transportation habits, and waste generation. The application features a sophisticated dashboard with interactive charts, personalized recommendations, and social features that allow users to compete in eco-friendly challenges.",
-    image: "/sustainability-dashboard-with-green-charts-and-eco.jpg",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Chart.js", "Tailwind CSS", "Vercel"],
+      "Smart Grade App is an AI-powered tool built with Streamlit that predicts student performance based on academic inputs. The application uses KNN machine learning model to analyze standardized internal and preboard marks, providing instant data-driven grade forecasts with comprehensive visualizations including grade distribution charts, correlation heatmaps, and performance comparisons.",
+    image: "/P1.jpg",
+    technologies: ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly"],
     features: [
-      "Real-time carbon footprint tracking",
-      "Interactive data visualizations",
-      "Goal setting and progress monitoring",
-      "Community challenges and leaderboards",
-      "Personalized sustainability recommendations",
-      "Mobile-responsive design",
+      "KNN-based grade prediction model",
+      "Interactive Streamlit web interface",
+      "Real-time data visualizations",
+      "Grade distribution analysis",
+      "Correlation heatmap visualization",
+      "Performance comparison charts",
     ],
-    githubUrl: "https://github.com/ameena-tabassum/ecotrack",
-    liveUrl: "https://ecotrack-demo.vercel.app",
+    githubUrl: "https://github.com/ameenatabassum123/smart-grade-app",
+    liveUrl: "https://smart-grade-app-demo.streamlit.app",
     status: "Completed",
     year: "2024",
   },
   {
     id: 2,
+    title: "Loan Approval Prediction System",
+    category: "AI/ML",
+    description:
+      "A machine learning-based loan approval system that predicts loan application outcomes using applicant financial data.",
+    longDescription:
+      "This project implements an end-to-end ML workflow for loan approval prediction using Logistic Regression and XGBoost models. The system analyzes key applicant details such as income, credit history, loan amount, and other financial factors to make accurate predictions with explainability features using LIME for feature-level insights.",
+    image: "/P2.jpg",
+    technologies: ["Python", "Streamlit", "Scikit-learn", "XGBoost", "Pandas", "LIME", "Joblib"],
+    features: [
+      "Logistic Regression & XGBoost models",
+      "End-to-end ML pipeline",
+      "Interactive prediction interface",
+      "Model explainability with LIME",
+      "Comprehensive evaluation metrics",
+      "One-click deployment ready",
+    ],
+    githubUrl: "https://github.com/ameenatabassum123/loan-approval",
+    liveUrl: "https://loan-approval-demo.streamlit.app",
+    status: "Completed",
+    year: "2024",
+  },
+  {
+    id: 3,
+    title: "Netflix Content Analysis Dashboard",
+    category: "Data Science",
+    description:
+      "Comprehensive exploratory data analysis of Netflix content library revealing trends in genres, production, and global content strategy.",
+    longDescription:
+      "An in-depth analysis of Netflix's content library using Python data science tools to uncover trends in genres, content production by country, yearly growth patterns, and ratings distribution. The project provides insights into Netflix's evolving content strategy, highlighting the shift towards international content and mature programming.",
+    image: "/P3.jpg",
+    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    features: [
+      "Genre popularity analysis",
+      "Global content production trends",
+      "Yearly growth pattern visualization",
+      "Ratings distribution insights",
+      "Content strategy analysis",
+      "Interactive data visualizations",
+    ],
+    githubUrl: "https://github.com/ameenatabassum123/Netflix-Content-Analysis",
+    liveUrl: "https://github.com/ameenatabassum123/Netflix-Content-Analysis",
+    status: "Completed",
+    year: "2024",
+  },
+  {
+    id: 4,
+    title: "Skin Disease Detection App",
+    category: "AI/ML",
+    description:
+      "A CNN-powered web application for detecting 9 different types of skin diseases from uploaded images with confidence scoring.",
+    longDescription:
+      "A Django web application utilizing Convolutional Neural Networks for skin disease detection. The system can identify 9 different skin conditions including Melanoma, Basal Cell Carcinoma, and other dermatological conditions. Features a user-friendly web interface with image upload capabilities and provides confidence percentages for medical reference.",
+    image: "/P4.jpg",
+    technologies: ["Python", "Django", "TensorFlow", "CNN", "NumPy", "PostgreSQL", "Render"],
+    features: [
+      "CNN-based image classification",
+      "9 skin disease categories detection",
+      "Web-based image upload interface",
+      "Confidence scoring system",
+      "Medical-grade analysis",
+      "Cloud deployment ready",
+    ],
+    githubUrl: "https://github.com/ameenatabassum123/skin-disease-app",
+    liveUrl: "https://github.com/ameenatabassum123/skin-disease-app",
+    status: "Completed",
+    year: "2024",
+  },
+  {
+    id: 5,
     title: "StudyBuddy - AI-Powered Learning Assistant",
     category: "AI/ML",
     description:
@@ -48,77 +117,8 @@ const projects = [
       "Multi-format document processing",
       "Spaced repetition algorithm",
     ],
-    githubUrl: "https://github.com/ameena-tabassum/studybuddy",
-    liveUrl: "https://studybuddy-ai.herokuapp.com",
-    status: "In Development",
-    year: "2024",
-  },
-  {
-    id: 3,
-    title: "TaskFlow - Project Management Mobile App",
-    category: "Mobile",
-    description:
-      "A cross-platform mobile app for team project management with real-time collaboration and productivity analytics.",
-    longDescription:
-      "TaskFlow is a comprehensive project management solution built with React Native. It features real-time synchronization, offline capabilities, and advanced analytics. The app includes team collaboration tools, time tracking, file sharing, and customizable workflows that adapt to different project methodologies.",
-    image: "/mobile-project-management-app-interface-with-task-.jpg",
-    technologies: ["React Native", "Node.js", "MongoDB", "Socket.io", "Redux", "Firebase", "Expo"],
-    features: [
-      "Real-time team collaboration",
-      "Offline functionality",
-      "Advanced task management",
-      "Time tracking and reporting",
-      "File sharing and comments",
-      "Push notifications",
-    ],
-    githubUrl: "https://github.com/ameena-tabassum/taskflow",
-    liveUrl: "https://apps.apple.com/taskflow",
-    status: "Completed",
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "CryptoAnalyzer - Blockchain Data Visualization",
-    category: "Data Science",
-    description:
-      "A data visualization platform analyzing cryptocurrency trends and providing predictive insights using machine learning.",
-    longDescription:
-      "CryptoAnalyzer combines real-time blockchain data with advanced analytics to provide comprehensive market insights. The platform features interactive charts, technical indicators, sentiment analysis from social media, and machine learning models for price prediction and trend analysis.",
-    image: "/cryptocurrency-data-visualization-dashboard-with-c.jpg",
-    technologies: ["Python", "Pandas", "Plotly", "Streamlit", "Scikit-learn", "Web3.py", "PostgreSQL"],
-    features: [
-      "Real-time market data integration",
-      "Advanced charting and indicators",
-      "Sentiment analysis",
-      "ML-based price predictions",
-      "Portfolio tracking",
-      "Custom alerts and notifications",
-    ],
-    githubUrl: "https://github.com/ameena-tabassum/cryptoanalyzer",
-    liveUrl: "https://cryptoanalyzer-demo.streamlit.app",
-    status: "Completed",
-    year: "2023",
-  },
-  {
-    id: 5,
-    title: "HealthHub - Telemedicine Platform",
-    category: "Full-Stack",
-    description:
-      "A telemedicine platform connecting patients with healthcare providers through secure video consultations.",
-    longDescription:
-      "HealthHub is a HIPAA-compliant telemedicine solution that facilitates remote healthcare delivery. The platform includes secure video conferencing, electronic health records, appointment scheduling, prescription management, and integration with wearable devices for continuous health monitoring.",
-    image: "/telemedicine-platform-interface-with-video-consult.jpg",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "WebRTC", "Socket.io", "AWS", "Stripe"],
-    features: [
-      "Secure video consultations",
-      "Electronic health records",
-      "Appointment scheduling",
-      "Prescription management",
-      "Payment processing",
-      "HIPAA compliance",
-    ],
-    githubUrl: "https://github.com/ameena-tabassum/healthhub",
-    liveUrl: "https://healthhub-platform.com",
+    githubUrl: "https://github.com/ameenatabassum123/",
+    liveUrl: "https://github.com/ameenatabassum123/",
     status: "In Development",
     year: "2024",
   },
@@ -140,8 +140,8 @@ const projects = [
       "Historical data analysis",
       "Custom automation rules",
     ],
-    githubUrl: "https://github.com/ameena-tabassum/smarthome-iot",
-    liveUrl: "https://smarthome-demo.netlify.app",
+    githubUrl: "https://github.com/ameenatabassum123/",
+    liveUrl: "https://github.com/ameenatabassum123/",
     status: "Completed",
     year: "2023",
   },
@@ -266,7 +266,7 @@ export function ProjectsSection() {
         {/* View More Projects */}
         <div className="text-center mt-8 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
           <Button variant="outline" size="lg" asChild className="hover-lift">
-            <a href="https://github.com/ameena-tabassum" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/ameenatabassum123" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
               View All Projects on GitHub
             </a>
